@@ -4,8 +4,7 @@ Rating Flex is a Netflix-inspired movie discovery platform where users can brows
 
 ## Demo
 
-- Live Demo: [Add live demo URL here](https://your-live-demo-link.example)
-- GitHub Repository: [Add repository URL here](https://github.com/your-username/rating-flex)
+- Live Demo: [Live URL here](https://rating-flex.netlify.app/)
 
 ## Screenshots
 
