@@ -16,16 +16,13 @@ export default function Home() {
   const { data: upcoming, loading: upcomingLoading } = useFetch(getUpcomingMovies, []);
   const { data: tv, loading: tvLoading } = useFetch(getPopularTV, []);
 
-  // Pick a random trending movie for the hero banner
-  const heroMovie = trending?.results?.[Math.floor(Math.random() * Math.min(5, trending?.results?.length || 1))];
-
   return (
     <div>
       {/* Hero Banner */}
-      <HeroBanner movie={heroMovie} />
+      <HeroBanner movies={trending?.results} />
 
       {/* Movie Rows */}
-      <div className="-mt-16 relative z-10 space-y-2">
+      <div className="relative z-10 mx-auto mt-6 max-w-7xl space-y-4 px-0 pb-4 sm:mt-8 sm:space-y-5">
         <MovieRow
           title="🔥 Trending This Week"
           movies={trending?.results}

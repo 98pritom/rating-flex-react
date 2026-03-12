@@ -16,8 +16,8 @@ export default function MovieRow({ title, movies, loading }) {
   };
 
   return (
-    <section className="mb-8">
-      <h2 className="text-lg sm:text-xl font-bold mb-3 px-4 sm:px-6 lg:px-12">
+    <section className="mb-4 sm:mb-6">
+      <h2 className="mb-3 px-4 text-lg font-bold sm:px-6 sm:text-xl lg:px-8">
         {title}
       </h2>
 
@@ -25,22 +25,23 @@ export default function MovieRow({ title, movies, loading }) {
         {/* Left arrow */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-0 bottom-10 z-10 w-10 bg-black/50 opacity-0 group-hover/row:opacity-100 transition-opacity flex items-center justify-center hover:bg-black/80"
+          className="absolute left-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/35 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 sm:left-2 sm:opacity-0 sm:group-hover/row:opacity-100"
           aria-label="Scroll left"
+          type="button"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="h-5 w-5" />
         </button>
 
         {/* Scrollable row */}
         <div
           ref={rowRef}
-          className="flex gap-3 overflow-x-auto scrollbar-hide px-4 sm:px-6 lg:px-12 pb-2"
+          className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6 lg:px-8"
         >
           {loading
             ? Array.from({ length: 8 }).map((_, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[140px] sm:w-[160px] md:w-[180px]"
+                  className="w-[140px] flex-shrink-0 sm:w-[160px] md:w-[180px] lg:w-[200px]"
                 >
                   <div className="skeleton rounded-md w-full aspect-[2/3]" />
                   <div className="skeleton rounded mt-2 h-4 w-3/4" />
@@ -54,10 +55,11 @@ export default function MovieRow({ title, movies, loading }) {
         {/* Right arrow */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-0 bottom-10 z-10 w-10 bg-black/50 opacity-0 group-hover/row:opacity-100 transition-opacity flex items-center justify-center hover:bg-black/80"
+          className="absolute right-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/35 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 sm:right-2 sm:opacity-0 sm:group-hover/row:opacity-100"
           aria-label="Scroll right"
+          type="button"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="h-5 w-5" />
         </button>
       </div>
     </section>

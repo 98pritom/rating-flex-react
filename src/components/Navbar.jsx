@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-netflix-red font-extrabold text-2xl tracking-tight">
+          <Link to="/" className="text-netflix-red font-extrabold text-xl tracking-tight sm:text-2xl">
             RATING FLEX
           </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
               </div>
               <button
                 type="submit"
-                className="bg-netflix-red text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-netflix-red-hover transition-colors"
+                className="bg-netflix-red text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-netflix-red-hover transition-colors shrink-0"
               >
                 Search
               </button>

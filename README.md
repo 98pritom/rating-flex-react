@@ -1,16 +1,99 @@
-# React + Vite
+# Rating Flex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rating Flex is a Netflix-inspired movie discovery platform where users can browse trending titles, explore detailed movie information, and search movies or TV content using The Movie Database (TMDB) API. The project focuses on a modern, responsive UI with smooth interactions and fast client-side navigation.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Live Demo: [Add live demo URL here](https://your-live-demo-link.example)
+- GitHub Repository: [Add repository URL here](https://github.com/your-username/rating-flex)
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Home Page
 
-## Expanding the ESLint configuration
+![Home Page Screenshot](./screenshots/home_2.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Hero Banner
+
+![Hero Banner Screenshot](./screenshots/home_1.png)
+
+### Movie Details Page
+
+![Movie Details Screenshot](./screenshots/details_1.png)
+![Movie Details Screenshot](./screenshots/details_2.png)
+
+### Search Page
+
+![Search Page Screenshot](./screenshots/search.png)
+
+## Features
+
+- Netflix-inspired UI
+- Hero banner with auto slider and navigation controls
+- Trending movies section
+- Popular and top rated movies
+- Movie details page
+- Cast and trailer support
+- Search movies and TV shows
+- Responsive design for mobile, tablet, and desktop
+- Smooth horizontal scrolling movie rows
+
+## Tech Stack
+
+### Frontend
+
+- React
+- Tailwind CSS
+- Axios
+- React Router
+
+### API
+
+- TMDB API
+
+### UI / Icons
+
+- Lucide Icons
+
+## Folder Structure
+
+```text
+src/
+	api/
+	components/
+	pages/
+	hooks/
+	utils/
+	layout/
+```
+
+- src/: Main application source code.
+- src/api/: API client setup and TMDB endpoint functions.
+- src/components/: Reusable UI components (banner, rows, cards, navbar, loaders).
+- src/pages/: Route-level pages (home, search, movie details).
+- src/hooks/: Custom React hooks for shared data fetching/state logic.
+- src/utils/: Utility helpers (image URL builders, formatting helpers).
+- src/layout/: Shared layout wrappers and app-level structure.
+
+## API Reference
+
+Rating Flex consumes TMDB endpoints including:
+
+- Trending Movies
+- Popular Movies
+- Top Rated Movies
+- Movie Details
+- Search API
+
+## Future Improvements
+
+- User authentication
+- Watchlist feature
+- Movie ratings by users
+- Infinite scrolling
+- Dark/light theme toggle
+
+## Author
+
+Author: Pritom Jyoti Talukdar
+

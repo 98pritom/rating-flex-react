@@ -14,7 +14,7 @@ export default function MovieCard({ item }) {
   return (
     <Link
       to={linkTo}
-      className="group relative flex-shrink-0 w-[140px] sm:w-[160px] md:w-[180px] cursor-pointer"
+      className="group relative w-[140px] flex-shrink-0 snap-start cursor-pointer sm:w-[160px] md:w-[180px] lg:w-[200px]"
     >
       {/* Poster */}
       <div className="relative overflow-hidden rounded-md">
@@ -22,7 +22,7 @@ export default function MovieCard({ item }) {
           src={posterUrl(item.poster_path, "w300") || FALLBACK_POSTER}
           alt={title}
           loading="lazy"
-          className="w-full aspect-[2/3] object-cover transition-transform duration-300 group-hover:scale-110"
+          className="aspect-[2/3] w-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
 
         {/* Hover overlay */}
@@ -38,7 +38,7 @@ export default function MovieCard({ item }) {
 
       {/* Title below poster */}
       <div className="mt-2 px-0.5">
-        <h3 className="text-sm font-medium text-gray-200 truncate group-hover:text-white transition-colors">
+        <h3 className="truncate text-sm font-medium text-gray-200 transition-colors group-hover:text-white">
           {title}
         </h3>
         {date && (
